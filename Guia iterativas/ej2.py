@@ -11,6 +11,7 @@ for i in range(3):
     n1 = int(input("Ingrese la primera nota: "))
     n2 = int(input("Ingrese la segunda nota: "))
     promedio = (n1 + n2) // 2
+    print(f"El promedio del alumno {i + 1} es: {promedio}")
     promedio_curso += promedio
 
 print(f"Promedio del curso: {promedio_curso / 3}")
