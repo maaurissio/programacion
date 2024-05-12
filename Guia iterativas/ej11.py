@@ -1,0 +1,1 @@
+# 11. Determinar si un número entero ingresado es primo o no.
