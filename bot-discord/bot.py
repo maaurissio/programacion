@@ -173,4 +173,4 @@ with yt_dlp.YoutubeDL({'format': 'ba/ba*', 'noplaylist': True, 'ffmpeg_location'
         else:
             await ctx.send("no hay canciones sonando wn")
 
-    bot.run('MTI0NjI5NjA4NjcxMzIwODkxMw.GAj3Z4.LJwAF-mktk8nGwkqiFDDb1olktBi88JUlOMOv8')
+    #bot.run('MTI0NjI5NjA4NjcxMzIwODkxMw.GAj3Z4.LJwAF-mktk8nGwkqiFDDb1olktBi88JUlOMOv8')
