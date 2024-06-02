@@ -18,19 +18,4 @@ system("cls")
 # paso 5: usa el método insert() para agregar a Ringo Starr al principio de la lista.
 # Por cierto, ¿eres fan de los Beatles? (Los Beatles son una de las bandas favoritas de Greg. Pero espera...¿Quién es Greg?)
 
-beatles = []
-beatles.append("John Lennon")
-beatles.append("Paul McCartney")
-beatles.append("Goerge Harrison")
-print(beatles)
-
-for i in range(2):
-    miembros = input("Agregue un miembro nuevo: ")
-    beatles.append(miembros)
-    print(beatles)
-del beatles[3]
-print(beatles)
-del beatles[3]
-print(beatles)
-beatles.insert(0, "Ringo Starr")
-print(beatles)
+ 
