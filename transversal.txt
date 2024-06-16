@@ -1,0 +1,42 @@
+El concierto de Michael Jam esta proximo a ser llevado a cabo, es por eso que se
+le encomendo para realizar el sistema de venta de entradas para la empresa Wakoldos S.A
+este sistema debe poseer las siguientes caracteristicas:
+
+-Compra de entradas
+-Mostrar ubicaciones disponibles
+-Ver el listado de asistentes
+-Ver las ganancias totales
+(Todas como funciones)
+
+Para cada una de estas caracteristicas se necesitan las siguientes especificaciones:
+
+Compra de entradas:
+-La persona puede comprar de 1 a 3 entradas, en caso contrario debe enviar un error
+-Las entradas del teatro son 100 en total, sin embargo estas estan divididas por secciones,
+estas son del asiento 1 al 20 "Tipo Platinum con un valor de 120000 cada una", del asiento
+21 al 50 "Tipo Gold con un valor de 80000 cada una" y del asiento 51 al 100 "Tipo Silver
+con un valor de 50000
+-Cada entrada debe de ser asignada al rut de la persona en especifico
+
+Mostrar ubicaciones disponibles:
+-Esta funcion debera mostrar todos los asientos que se encuentren disponible enumerados
+del 1 al 100, en caso de no estar disponible debera aparecer con una X
+Ejemplo:
+1 2 3 4 5 6 7 8 9 10
+11 12 13 14 15 16 17 18 19 20
+21 22 23 24 25 26 27 28 29 30
+31 32 33 34 35 36 37 38 39 40
+41 42 43 44 45 46 47 X 49 50
+51 52 53 54 55 56 57 58 59 60
+61 62 63 X 65 66 67 68 69 70
+71 72 73 74 75 76 77 78 79 80
+81 82 83 84 85 86 87 88 89 90
+91 92 93 94 95 96 97 98 99 100
+
+Ver el listado de asistentes:
+-Esta opcion debera mostrar los ruts de las personas que han adquirido algun boleto,
+junto con el propio nombre del boleto y su valor asignado
+
+Ver las ganacias totales:
+Esta opcion debera mostrar las ganancias totales de la venta de entradas, ademas de 
+tambien mostrar las ganancias dependiendo del tipo de entrada, ya sea Platinum Gold o Silver
