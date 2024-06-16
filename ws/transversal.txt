@@ -39,4 +39,4 @@ junto con el propio nombre del boleto y su valor asignado
 
 Ver las ganacias totales:
 Esta opcion debera mostrar las ganancias totales de la venta de entradas, ademas de 
-tambien mostrar las ganancias dependiendo del tipo de entrada, ya sea Platinum Gold o Silver
+tambien mostrar las ganancias dependiendo del tipo de entrada, ya sea Platinum Gold o Silver.

@@ -16,6 +16,6 @@ def carrera_caballos(nombres_caballos):
         time.sleep(0.2)  
 
 if __name__ == "__main__":
-    nombres_caballos = ["Seba", "Joshua", "Amaro", "Mauri", "Chelo"]
+    nombres_caballos = ["vicho", "tomas", "mauri"]
     ganador = carrera_caballos(nombres_caballos)
     print(f"\n¡El ganador es {ganador}!")
