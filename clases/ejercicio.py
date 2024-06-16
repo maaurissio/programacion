@@ -5,7 +5,7 @@ system("cls")
 mes = []
 
 while True:
-    mes = cargar_datos(mes)
+    mes = cargardatos(mes)
     print("""
     1. Fecha del día con mayor temperatura. 
     2. Día más frío del mes. 
