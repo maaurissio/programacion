@@ -13,7 +13,7 @@ asientos = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
             '91', '92', '93', '94', '95', '96', '97', '98', '99', '100']
 
 # personas = []
-personas = [['1', '10', 'Asiento platinum'], ['2', '100', 'Asiento silver'], ['3', '1', 'Asiento platinum']]
+personas = [[1, '10', 'Asiento platinum'], [2, '100', 'Asiento silver'], [3, '1', 'Asiento platinum']]
 
 silver_precio = 50000
 gold_precio = 80000
@@ -53,7 +53,7 @@ def listado():
         print("No hay asientos comprados")
     else:
         for persona in personas:
-                print(f"Los asientos comprados son: {persona[0]}")
+                print(f"El asiento {persona[0]} de tipo {persona[2]} fue comprado por el rut {persona[1]}")
 
 
 while True:
@@ -68,9 +68,9 @@ while True:
         case "1":
             compra()
         case "2":
-            listado()
-        case "3":
             pass
+        case "3":
+            listado()
         case "0":
             pass
         case other:
