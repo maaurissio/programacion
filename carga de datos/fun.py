@@ -2,7 +2,7 @@ import os
 
 def cargar_datos(mes):      #Carga de datos
     mes = []
-    f = open('clases/datos/datosmes.csv', 'r')
+    f = open('carga de datos/datos/datosmes.csv', 'r')
     f.readline()
     while True:
         linea = f.readline()
@@ -14,14 +14,6 @@ def cargar_datos(mes):      #Carga de datos
         mes.append(datos)
     f.close()
     return mes
-
-# def cargardatos(mes):
-#     f = open('clases/datos/datosmes.csv', 'r')
-#     f.readline()
-#     for linea in f:
-#         dias = linea.replace('\n', '').split(';')
-#         mes.append(dias)
-
 
 def fecha_mayor_temperatura(mes):   #Fecha del día con mayor temperatura
     os.system("cls")
