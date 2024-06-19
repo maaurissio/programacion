@@ -2,7 +2,7 @@ import os
 
 def cargar_datos(mes):      #Carga de datos
     mes = []
-    f = open('clases/datos/datosmes.csv', 'r')
+    f = open('carga de datos/datos/datosmes.csv', 'r')
     f.readline()
     while True:
         linea = f.readline()

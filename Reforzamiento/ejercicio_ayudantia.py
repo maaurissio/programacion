@@ -1,40 +1,73 @@
 from os import system
 system("cls")
 
-# productos = []
+productos = [
+    {'Nombre': 'Chocolate', 'Categoria': 'Alimento', 'Precio': 1400, 'Stock': 30},
+    {'Nombre': 'Poleron', 'Categoria': 'Ropa', 'Precio': 21990, 'Stock': 20},
+    {'Nombre': 'Monitor', 'Categoria': 'Electronica', 'Precio': 149990, 'Stock': 5}
+]
 
-productos = [["Chocolate", "Alimento", "1.500", "30"], ["Refrigerador", "Electronica", "250.000", "5"], ["Polera", "Ropa", "10.000", "10"]]
-
-categoria = ["Electronica", "Ropa", "Alimento"]
+categorias = ["Electronica", "Ropa", "Alimento"]
 
 def registrar():    #Registrar producto
-    nombre = input("Ingrese nombre del producto: ")
-    print(f"Dispone de tres categorias para el producto: {categoria}")
-    categ = input("Ingrese categoria del producto: ")
-    while categ not in categoria:
-        categ = input("Ingrese una categoria valida: ")
-    precio = input("Inrese el precio del producto: ")
-    cantidad = input("Ingrese la cantidad en stock del producto: ")
-    producto = [nombre, categ, precio, cantidad]
-    productos.append(producto)
-    return productos
+    system("cls")
+    nombre = input("Ingrese el nombre del producto: ")
+    categoria = input("Ingrese la categoria del producto: ")
+    while True:
+        if categoria in categorias:
+            break
+        else:
+            print("Ingrese una categoria valida")
+            categoria = input("Ingrese la categoria del producto: ")
+    precio = int(input("Ingrese un precio al producto: "))
+    while True:
+        if precio <= 0:
+            print("Ingrese un precio valido")
+            precio = int(input("Ingrese un precio al producto: "))
+        else:
+            break
+    stock = int(input("Ingrese el stock: "))
+    while True:
+        if stock <= 0:
+            print("Ingrese una cantidad valida")
+            stock = int(input("Ingrese el stock: "))
+        else:
+            break
+    nuevo_producto = {
+        'Nombre': nombre,
+        'Categoria': categoria,
+        'Precio': precio,
+        'Stock': stock
+    }
+    productos.append(nuevo_producto)
+    print(F"{nombre} registrado con exito!")
 
 def listar():
-    print(productos)
+    system("cls")
+    for producto in productos:
+        for clave, valor in producto.items():
+            print(f"{clave}: {valor}")
+        print("-----")
 
 def informe():
-    op = input("Ingrese la categoria que desea imprimir: ")
-    while op not in categoria:
-        op = input("Ingrese una categoria valida: ")
-    for i in productos:
-        if i[1] == op:
-            print(i)
+    system("cls")
+    print("-" * 30)
+    print("INFORME DE INVENTARIO")
+    print("-" * 30)
+    for producto in productos:
+        print(f"Nombre: {producto['Nombre']}")
+        print(f"Categoría: {producto['Categoria']}")
+        print(f"Precio: ${producto['Precio']}")
+        print(f"Stock: {producto['Stock']}")
+        print("-" * 30)
+
+
 
 while True:
     print("""
 1. Registrar producto
 2. Lista todos los productos
-3. Imprimir informe de invenario
+3. Imprimir informe de inventario
 0. Salir del programa
 """)
     
