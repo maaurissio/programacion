@@ -39,7 +39,7 @@ def reserva(bus, reservas):
             else:
                 print("Ingrese una opción válida (1 o 2).")
         except ValueError:
-            print("Opción inválida. Ingrese un número.")
+            print("Opción inválida.")
     system("cls")
     print("Asientos disponibles:")
     for asiento, estado in bus.items():
@@ -48,20 +48,20 @@ def reserva(bus, reservas):
     while True:
         try:
             op = int(input("Ingrese el número del asiento que quiere: "))
-            if op >= 1 and op <=16 and bus[op] == "Disponible":
+            if op >= 1 and op <= 16 and bus[op] == "Disponible":
                 print("Asiento reservado con éxito!")
                 pasajero = (rut, tipo, op)
                 reservas.append(pasajero)
                 bus[op] = "Reservado"
                 return bus, reservas
             else:
-                print("Asiento no disponible o inválido. Intente nuevamente.")
+                print("Asiento no disponible o inválido")
         except (ValueError, KeyError):
-            print("Opción inválida. Ingrese un número de asiento válido.")
+            print("Opción inválida.")
 
 def disponibilidad(bus):
     system("cls")
-    print("Asientos disponibles:")
+    print("Asientos disponibles: ")
     for asiento, estado in bus.items():
         if estado == "Disponible":
             print(asiento, estado)
