@@ -48,7 +48,7 @@ def reserva(bus, reservas):
     while True:
         try:
             op = int(input("Ingrese el número del asiento que quiere: "))
-            if 1 <= op <= 16 and bus[op] == "Disponible":
+            if op >= 1 and op <=16 and bus[op] == "Disponible":
                 print("Asiento reservado con éxito!")
                 pasajero = (rut, tipo, op)
                 reservas.append(pasajero)
