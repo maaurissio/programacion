@@ -10,6 +10,19 @@ asientos = {
     6: ['O'] * 33,
 }
 
+# pasajeros = [{
+#                     "Rut": 21588043,
+#                     "Nombre": "Mauricio",
+#                     "Apellido": "Gajardo",
+#                     "Tipo asiento": "Comun"
+#                 },{
+#                     "Rut": 13958605,
+#                     "Nombre": "Maria",
+#                     "Apellido": "Vega",
+#                     "Tipo asiento": "Comun"
+#                 }
+#                 ]
+
 pasajeros = []
 
 def comprar_pasajes(asientos, pasajeros):
@@ -45,13 +58,19 @@ def comprar_pasajes(asientos, pasajeros):
         while True:
             asiento = int(input("Ingrese el número de asiento (1-33): "))
             if asiento >= 1 and asiento <= 33 and asientos[fila][asiento - 1] == 'O':
+                if asiento >= 1 and asiento <=5 or asiento == 18:
+                    tipo_asiento = "Preferente"
+                elif (asiento >= 6 and asiento <= 9) or (asiento >= 19 and asiento <= 33):
+                    tipo_asiento = "Comun"
+                else:
+                    tipo_asiento = "Espacio Adicional"
                 asientos[fila][asiento - 1] = 'X'
                 asientos_comprados += 1
                 pasajero = {
                     "Rut": rut,
                     "Nombre": nombre,
                     "Apellido": apellido,
-                    "Tipo asiento": asiento
+                    "Tipo asiento": tipo_asiento
                 }
                 pasajeros.append(pasajero)
                 print("El asiento fue comprado con éxito.")
@@ -59,6 +78,41 @@ def comprar_pasajes(asientos, pasajeros):
             else:
                 print("Asiento no disponible, ingrese otro por favor")
 
+def mostrar_ubicaciones(asientos):
+    """Muestra los asientos disponibles en el mapa de asientos."""
+    print("\nAsientos disponibles:")
+    for fila, asientos_fila in asientos.items():
+        asientos_libres = ""
+        for i, estado in enumerate(asientos_fila):
+            if estado == 'O':
+                asientos_libres += str(i + 1) + ", "
+        if asientos_libres:
+            print(f"Fila {fila}: {asientos_libres[:-2]}")  
+
+def ver_pasajeros(pasajeros):
+    for pasajero in pasajeros:
+        rut = pasajero["Rut"]
+        nombre = pasajero["Nombre"]
+        apellido = pasajero["Apellido"]
+        tipo_asiento = pasajero["Tipo asiento"]
+        print(f"RUT: {rut}, Nombre: {nombre}, Apellido: {apellido}, Tipo asiento: {tipo_asiento}")
+
+def buscar_pasajeros(pasajeros):
+    while True:
+        rut_buscado = input("Ingrese el rut que desea buscar: ")
+        if len(rut_buscado) == 8 and rut_buscado.isnumeric():
+            rut_buscado = int(rut_buscado)
+            break
+        else:
+            print("Ingrese un rut valido")
+    encontrado = False 
+    for pasajero in pasajeros:
+        if rut_buscado == pasajero["Rut"]:
+            print("Rut encontrado")
+            encontrado = True
+            break
+    if not encontrado:
+        print("Rut no encontrado")
 
 while True:
     print("""
@@ -75,11 +129,11 @@ while True:
             case 1:
                 comprar_pasajes(asientos, pasajeros)
             case 2:
-                pass
+                mostrar_ubicaciones(asientos)
             case 3:
-                pass
+                ver_pasajeros(pasajeros)
             case 4:
-                pass
+                buscar_pasajeros(pasajeros)
             case 5:
                 pass
             case 0:
