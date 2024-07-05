@@ -7,6 +7,7 @@ def cargar_trabajadores(trabajadores):
     with open('trabajadores.csv', 'r', encoding='utf-8') as archivo:
         next(archivo)  # Salta la primera línea del archivo
         for linea in archivo:
+            trabajador = trabajador[1].replace('', '')
             trabajadores.append(linea.strip().split(','))
     return trabajadores
 

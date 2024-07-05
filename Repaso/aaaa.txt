@@ -1,0 +1,40 @@
+Se está desarrollando una aplicación para registrar los goles que realizan los jugadores de algunos de los equipos de la actual copa américa. 
+Para el funcionamiento del sistema se requiere las siguientes funcionalidades:
+
+1.	Registrar bitácora de goles
+2.	Listar los todas las bitácoras
+3.	Imprimir hoja bitácoras
+4.	Buscar una bitácora por ID
+5.	Salir del programa
+
+1.	Registrar bitácora
+Para registrar una bitácora se requiere lo siguiente: Nombre del jugador, año de nacimiento 
+(debe ser superior a 1985), equipo al que pertenece, detalle de goles emitidos contra los contrincantes, los cuales son: USA, México y Colombia. 
+Para formar parte de esta bitácora es requisito haber registrado, en promedio, al menos 2 goles ante los 3 contrincantes y esto deberá ser validado al momento de registrar la bitácora. 
+Por lo tanto, un detalle de bitácora  podría verse registrado de la siguiente manera:
+
+ID registro	Jugador	Año Nacimiento	Equipo	USA	México	Colombia
+123456	Alexis Sánchez	1988	Chile	2	1	3
+Debe validar que todos los datos sean ingresados. 
+
+2.	Listar Bitácoras
+Debe mostrar en la pantalla la lista de todas las bitácoras registradas en un formato similar al ejemplo anterior de registro de bitácora. 
+Al listar se DEBE INCLUIR el encabezado tal y como se muestra en la imagen anterior.
+
+3.	Imprimir hoja bitácoras
+Para imprimir la hoja de bitácoras, el usuario debe seleccionar alguno de los equipos que participan en la competencia. 
+Estos equipos deben estar previamente definidos en algún tipo de colección de Python en el código, los equipos son: Chile, Argentina, Perú, Canadá
+.
+Al seleccionar uno de los equipos, se generará un archivo de texto (.csv) con el detalle de las bitácoras de los jugadores del equipo. 
+Este debe tener la misma forma del registro completo de las opciones anteriores, pero en archivo de texto. Este archivo debe contener el encabezado del detalle de bitácora.
+
+4.	Buscar una bitácora por ID
+Debe pedir al usuario ingresar un id de la bitácora y mostrar su detalle
+
+5.	Salir del programa
+El programa debe funcionar hasta que el usuario decida salir.
+
+CONSIDERACIONES: 
+•	Recuerde las validaciones implícitas en el problema. 
+•	Recuerde utilizar librería para limpiar pantalla haciendo más fácil su visualización y generar números aleatorios para generar el ID de bitácora.
+•	Cada opción de la aplicación debe desarrollarse en una función que, pudiendo estar en archivos separados o en un mismo archivo, deben se llamadas desde el programa principal.
