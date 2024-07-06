@@ -1,0 +1,14 @@
+ID: 1
+Titulo: Star Wars
+Autor: Vicente Colicheo
+Genero: Accion
+Año Publicación: 1975
+Ejemplares Disponibles: 90000
+
+ID: 2
+Titulo: Harry Potter
+Autor: Bryan Jara
+Genero: Sexual
+Año Publicación: 1986
+Ejemplares Disponibles: 1
+

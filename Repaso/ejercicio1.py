@@ -22,7 +22,7 @@ def registro_goles(jugadores):
             print("Ingrese un nombre valido")
             continue
     while True:
-        nacimiento = input("Ingrese el año de nacimiento del jugador")
+        nacimiento = input("Ingrese el año de nacimiento del jugador: ")
         if nacimiento.isnumeric():
             nacimiento = int(nacimiento)
             if nacimiento >= 1985:
@@ -54,8 +54,27 @@ def registro_goles(jugadores):
             }
             jugadores.append(jugador)
             print("Jugador registrado exitosamente!")
+            break
 
 def listar(jugadores):
+    print("ID Registro        Jugador         Año Nacimiento          Equipo          USA         Mexico          Colombia")
+    for jugador in jugadores:
+        print(f"""{jugador["ID registro"]}      {jugador["Nombre"]}     {jugador["Año"]}        {jugador["Equipo"]}         {jugador["USA"]}        {jugador["Mexico"]}        {jugador["Colombia"]}""")
+
+
+def imprimir_bitacora(jugadores):
+    archivo = open("bitacora.csv", "w")
+    archivo.write("ID Registro;Jugador;Año Nacimiento;Equipo;USA;Mexico;Colombia")
+    for jugador in jugadores:
+        archivo.write(f"\n{jugador["ID registro"]};{jugador["Nombre"]};{jugador["Año"]};{jugador["Equipo"]};{jugador["USA"]};{jugador["Mexico"]};{jugador["Colombia"]}")
+    archivo.close()
+
+def buscar_id(jugadores):
+    id = int(input("Ingrese un id a buscar: "))
+    for jugador in jugadores:
+        if id == jugador["ID registro"]:
+            print(f"""ID Registro        Jugador         Año Nacimiento          Equipo          USA         Mexico          Colombia
+{jugador["ID registro"]}      {jugador["Nombre"]}     {jugador["Año"]}        {jugador["Equipo"]}         {jugador["USA"]}        {jugador["Mexico"]}        {jugador["Colombia"]}""")
 
 while True:
     print("""
@@ -69,11 +88,11 @@ while True:
         case "1":
             registro_goles(jugadores)
         case "2":
-            pass
+            listar(jugadores)
         case "3":
-            pass
+            imprimir_bitacora(jugadores)
         case "4":
-            pass
+            buscar_id(jugadores)
         case "0":
             break
         case other:
