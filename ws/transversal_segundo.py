@@ -12,8 +12,8 @@ asientos = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
             '81', '82', '83', '84', '85', '86', '87', '88', '89', '90', 
             '91', '92', '93', '94', '95', '96', '97', '98', '99', '100']
 
-# personas = []
-personas = [[1, '10', 'Asiento platinum'], [2, '100', 'Asiento silver'], [3, '1', 'Asiento platinum']]
+personas = []
+#personas = [[1, '10', 'Asiento platinum'], [2, '100', 'Asiento silver'], [3, '1', 'Asiento platinum']]
 
 silver_precio = 50000
 gold_precio = 80000
@@ -55,23 +55,26 @@ def listado():
         for persona in personas:
                 print(f"El asiento {persona[0]} de tipo {persona[2]} fue comprado por el rut {persona[1]}")
 
-
 while True:
     print("""Entradas concierto Michael Jam
     1. Compra de entradas
     2. Mostrar ubicaciones disponibles
     3. Ver listado de asistentes
-    0. Ver las ganancias totales
+    4. Ver las ganancias totales
+    0. Salir
     """)
     op = input("Ingrese opcion: ")
     match op:
         case "1":
             compra()
         case "2":
-            pass
+            print(asientos)
         case "3":
             listado()
-        case "0":
+        case "4":
             pass
+        case "0":
+            print("Saliendo...")
+            break
         case other:
             print("Opcion invalida")

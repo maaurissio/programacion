@@ -119,13 +119,12 @@ def imprimir_ruta(pedidos):
     system("cls")
     sector_buscado = input("Ingrese un sector para imprimir (Concepción, Chiguayante, Talcahuano, Hualpén, San Pedro): ")
     if sector_buscado in sectores:
+        archivo = open(f"pedido.csv", "w")
+        archivo.write("IDpedido;Nombre;Apellido;Direccion;Sector;Disp.6lts;Disp.10lts;Disp.20lts")
         for pedido in pedidos:
-            archivo = open(f"pedido{pedido["Sector"]}.csv", "w")
-            archivo.write("IDpedido;Nombre;Apellido;Direccion;Sector;Disp.6lts;Disp.10lts;Disp.20lts")
-            archivo.write(f"\n{pedido["Nombre"]};{pedido["Apellido"]};{pedido["Direccion"]};{pedido["Sector"]};{pedido["Disp.6lts"]};{pedido["Disp.10lts"]};{pedido["Disp.20lts"]}\n")
-            archivo.close()
-    else:
-        print("Sector no valido")
+            archivo.write(f"\n{pedido["ID pedido"]};{pedido["Nombre"]};{pedido["Apellido"]};{pedido["Direccion"]};{pedido["Sector"]};{pedido["Disp.6lts"]};{pedido["Disp.10lts"]};{pedido["Disp.20lts"]}\n")
+        archivo.close()
+    return
 
 def buscar_pedido(pedidos):
     system("cls")
@@ -141,5 +140,5 @@ def buscar_pedido(pedidos):
             print(f"""ID pedido     Cliente     Direccion       Sector      Disp.6lts       Disp.10lts      Disp.20lts
         {pedido["ID pedido"]}       {pedido["Nombre"]}      {pedido["Direccion"]}       {pedido["Sector"]}      {pedido["Disp.6lts"]}        {pedido["Disp.10lts"]}       {pedido["Disp.20lts"]}
                                     {pedido["Apellido"]}""")
-        else:
-            print("ID incorrecto o no existente")
+            return
+    print("ID incorrecto o no existente")

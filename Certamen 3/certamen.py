@@ -11,6 +11,15 @@ pedidos = [{
     "Disp.6lts": 5,
     "Disp.10lts": 2,
     "Disp.20lts": 1
+},{
+    "ID pedido": 51595,
+    "Nombre": "Vicente",
+    "Apellido": "Colicheo",
+    "Direccion": "Angol 69",
+    "Sector": "Concepción",
+    "Disp.6lts": 5,
+    "Disp.10lts": 2,
+    "Disp.20lts": 1
 }]
 
 sectores = ("Concepción", "Chiguayante", "Talcahuano", "Hualpén", "San Pedro")
