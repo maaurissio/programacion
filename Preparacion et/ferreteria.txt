@@ -1,0 +1,29 @@
+Una ferretería necesita un programa en Python para gestionar su inventario y calcular el costo total de los pedidos de los clientes. El programa debe permitir:
+
+Registrar productos:
+
+Solicitar al usuario el nombre del producto, categoría, precio unitario y cantidad en stock.
+Validar que el precio y la cantidad sean números positivos.
+Almacenar la información de cada producto.
+Listar productos:
+
+Mostrar en pantalla una tabla con todos los productos registrados, incluyendo su nombre, categoría, precio unitario y cantidad en stock.
+
+Realizar un pedido:
+
+Pedirle al usuario nombre y correo, validar nombre y que el correo tenga un @ y un . 
+Solicitar al usuario el nombre del producto y la cantidad deseada.
+Verificar si hay suficiente stock disponible.
+Si hay suficiente stock:
+Calcular el costo total del pedido (precio unitario * cantidad).
+Actualizar la cantidad en stock del producto.
+Agregar el producto y su cantidad al pedido
+Preguntar al usuario si desea agregar otro producto al pedido.
+Si no hay suficiente stock:
+Informar al usuario que no hay suficiente stock disponible.
+
+Exportar pedido:
+
+Preguntar al usuario si desea exportar el pedido en formato CSV.
+Si el usuario confirma, generar un archivo CSV con los detalles del pedido (nombre del producto, cantidad, precio unitario y costo total).
+Salir del programa:
