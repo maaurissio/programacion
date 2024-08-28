@@ -1,0 +1,34 @@
+Registrar producto:
+	
+	Codigo del producto.
+	Nombre del producto (mínimo 3 caracteres, no numéricos).
+	Categoría (computadoras, teléfonos, televisores, electrodomésticos).
+	Precio (número positivo mayor a 0).
+	Cantidad en stock (número entero positivo mayor a 0).
+
+Listar todos los productos:
+
+	Mostrar en pantalla una lista con la información de todos los productos registrados (nombre, categoría, precio, cantidad).
+
+Imprimir informe de inventario:
+
+	Permitir al usuario elegir entre Iimprimir el inventario completo o filtrar por categoría (computadoras, teléfonos, televisores, electrodomésticos).
+	Generar un archivo CSV (inventario.csv) con el informe, incluyendo:
+	Nombre del producto
+	Categoría
+	Precio
+	Cantidad
+	Valor total del producto (precio * cantidad)
+	Total de productos
+	Valor total del inventario
+
+Realizar venta:
+
+	Código del producto (debe existir en el inventario).
+	Cantidad a vender (número entero positivo, menor o igual al stock disponible).
+	Validar los datos ingresados.
+	Si los datos son válidos, actualizar la cantidad en stock y registrar la venta (producto, cantidad, precio, fecha).
+	Calcular y mostrar el total a pagar.
+
+Salir del programa:
+	Terminar la ejecución del programa.

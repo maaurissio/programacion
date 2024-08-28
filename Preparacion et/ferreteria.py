@@ -2,7 +2,8 @@ from os import system
 system("cls")
 
 productos = {}
-pedidos = {1: [["Pato", "pato@deus.cl", "Subfusil", 2, 1000000, 2000000]]}
+#pedidos = {1: [["Pato", "pato@deus.cl", "Subfusil", 2, 1000000, 2000000]]}
+pedidos = {}
 categorias = ("Herramienta", "Material", "Electricidad")
 
 def registrar_producto():
@@ -115,8 +116,6 @@ def exportar():
 
 
 while True:
-    print(productos)
-    print(pedidos)
     opcion = input("""
 1.- Registrar producto
 2.- Listar productos
